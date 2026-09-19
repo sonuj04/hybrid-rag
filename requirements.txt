@@ -1,0 +1,5 @@
+elasticsearch>=8.15,<9
+sentence-transformers
+python-dotenv
+pymupdf
+pytest
