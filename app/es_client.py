@@ -1,9 +1,12 @@
 """Builds the Elasticsearch connection from config."""
+from functools import lru_cache
+
 from elasticsearch import Elasticsearch
 
 from app import config
 
 
+@lru_cache(maxsize=1)
 def get_es_client() -> Elasticsearch:
     kwargs = {"request_timeout": 30}
     if config.ES_PASSWORD:
