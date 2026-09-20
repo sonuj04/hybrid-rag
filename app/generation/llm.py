@@ -21,8 +21,13 @@ def _get_client() -> OpenAI:
         base_url=config.LLM_BASE_URL,
         api_key=config.LLM_API_KEY,
         max_retries=0,
-        timeout=60,
+        timeout=config.LLM_TIMEOUT,
     )
+
+
+def is_daily_quota_error(exc: Exception) -> bool:
+    """True if the provider says the DAILY quota is used up (waiting a few seconds won't help)."""
+    return "PerDay" in str(exc)
 
 
 def generate(messages: list[dict], temperature: float = 0.0) -> str:
@@ -36,11 +41,11 @@ def generate(messages: list[dict], temperature: float = 0.0) -> str:
             )
             return (response.choices[0].message.content or "").strip()
         except (
-            openai.InternalServerError,   # 5xx, such as the 503 "high demand" error
+            openai.InternalServerError,   # 5xx, such as a 503 "high demand" error
             openai.RateLimitError,        # 429
             openai.APIConnectionError,    # network problems, timeouts
         ) as exc:
-            if attempt == MAX_ATTEMPTS:
+            if is_daily_quota_error(exc) or attempt == MAX_ATTEMPTS:
                 raise
             wait_seconds = 2 ** attempt   # waits 2, 4, 8, then 16 seconds
             print(f"[LLM] {type(exc).__name__}, retrying in {wait_seconds}s (attempt {attempt}/{MAX_ATTEMPTS})")

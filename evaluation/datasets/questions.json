@@ -1,0 +1,462 @@
+[
+  {
+    "id": "q002",
+    "question": "How did the digit span and track tests measure changes in executive function after eight weeks of stepping exercise?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "q005",
+    "question": "What factors hinder attempts to restore long nerve connections in adults?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "q006",
+    "question": "What is a key finding from Zhang et al.’s meta-analysis regarding interpersonal neural synchronization?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_5.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "q007",
+    "question": "How does long-term potentiation in the hippocampus change with elevated corticosteroid levels?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_4.pdf",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "q011",
+    "question": "What is the duration of the heightened brain activity following a period of being blindfolded?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_11.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "q012",
+    "question": "How does a drug targeting the orexin receptor influence oligodendrocyte development?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_14.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "q018",
+    "question": "What relationship did the review by Valdés-Tovar et al. (2018) examine between melatonin and the hippocampus in depression?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_1.pdf",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "q019",
+    "question": "What specific connections, besides callosal connections, remain intact in “reeler” mice?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "q020",
+    "question": "What did the fMRI study on learning artificial characters find about participants who preferred the lexical pathway?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_5.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "q021",
+    "question": "What are the three stages of the general adaptive syndrome in response to acute stress?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_4.pdf",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "q028",
+    "question": "What changes in urinary quinolinic acid levels were observed in children receiving L. paracasei HII01 supplementation?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_2.pdf",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "q029",
+    "question": "What effects do Donepezil and Memantine have on long-term potentiation?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_3.pdf",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "q030",
+    "question": "How does intense physical activity affect dopamine levels in individuals with Parkinson’s disease?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 1
+      },
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "q032",
+    "question": "What was a common purpose of trephination in ancient North African tribes?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_1.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "q039",
+    "question": "What did the neurophysiological and fMRI study indicate about macaque V1 responsiveness after a retinal lesion?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_11.pdf",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "q040",
+    "question": "How many synapses does a neuron typically possess at birth?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_14.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "q041",
+    "question": "What is the primary brain region involved in achieving long-term language recovery after damage?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_15.pdf",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "id": "q042",
+    "question": "What are the drawbacks of using germ-free animal models to investigate the relationship between gut microbiota and neuroplasticity?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_2.pdf",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "q043",
+    "question": "What was the observed reduction in P75 Ectodomain levels found in the CSF and brain of Aβ transgenic AD mice?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_3.pdf",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "q047",
+    "question": "What happens to the number of callosal axons between visual areas 17 and 18 in cats raised with binocular eyelid suture?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "q048",
+    "question": "How did Tu et al. investigate brain anatomical changes related to learning Chinese as a second language?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_5.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "q053",
+    "question": "How did benzodiazepines restore ocular dominance plasticity in mice lacking a GABA-synthesizing enzyme?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_11.pdf",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "q055",
+    "question": "What was the key finding of Godecke et al.’s 2012 study regarding the timing of aphasia therapy after a stroke?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_15.pdf",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "q058",
+    "question": "What is the effect of high-intensity physical activity on tremor reduction in Parkinson's disease patients?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "q060",
+    "question": "What is the observed level of BDNF in patients with anorexia nervosa?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_1.pdf",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "q063",
+    "question": "What symptoms arise from elevated CREB levels in the nucleus accumbens?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_4.pdf",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "q064",
+    "question": "What was the percentage difference in recovery times observed between individuals in the highest and lowest emotional intelligence quartiles?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_9.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "q066",
+    "question": "What did a twin study find about hippocampal atrophy in demented twins compared with controls?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_7.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "q069",
+    "question": "What is the consequence of glutamate release onto nearby neurons following a network damage event?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_15.pdf",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "q070",
+    "question": "Which metabolites made from tryptophan by gut bacteria modulate serotonin synthesis, glutamatergic signaling and neuroinflammation?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_2.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "q072",
+    "question": "What changes in resting-state functional connectivity of motor circuits were seen in parkinsonian rats after long-term physical training?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "q075",
+    "question": "What BOLD signal changes were observed in V1, V2, V3, and V4 following two-hour periods of monocular deprivation?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 3
+      },
+      {
+        "source": "neuroplasticity_11.pdf",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "q076",
+    "question": "Which brain region showed decreased activation in Chinese dyslexics with delayed phonological reading development?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_5.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "q080",
+    "question": "What was the total effective rate of fluoxetine according to Duan et al. (2009)?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_7.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "h01",
+    "question": "According to Cramer’s epochs of stroke recovery, during which phase does most spontaneous behavioral recovery occur?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_15.pdf",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "h02",
+    "question": "What did early work by William James suggest about the brain’s capacity for change over time?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_13.pdf",
+        "page": 1
+      },
+      {
+        "source": "neuroplasticity_7.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "h03",
+    "question": "Which principle explains why neural pathways become more efficient with repeated practice but may be redirected when an activity is abandoned?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_13.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "h04",
+    "question": "Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_13.pdf",
+        "page": 1
+      },
+      {
+        "source": "neuroplasticity_8.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "h05",
+    "question": "In developmental brain formation, what happens to neuronal connections that are rarely utilized?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_14.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "h06",
+    "question": "Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_14.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "h07",
+    "question": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "h09",
+    "question": "Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson’s disease?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 1
+      },
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "h10",
+    "question": "Why might two genetically identical individuals still develop different patterns of neural organization?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_7.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "h11",
+    "question": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_9.pdf",
+        "page": 3
+      }
+    ]
+  }
+]

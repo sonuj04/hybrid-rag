@@ -21,3 +21,7 @@ data/processed/*
 .vscode/
 .idea/
 .DS_Store
+
+# Draft questions contain passages copied from the papers
+evaluation/datasets/candidates.json
+evaluation/review.txt

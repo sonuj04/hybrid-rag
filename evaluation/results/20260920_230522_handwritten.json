@@ -1,0 +1,286 @@
+{
+  "label": "handwritten",
+  "timestamp": "20260920_230522",
+  "num_questions": 10,
+  "typos": false,
+  "config": {
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "hybrid_candidates": 50
+  },
+  "results": {
+    "dense": {
+      "recall@5": 0.85,
+      "recall@10": 0.9,
+      "mrr@10": 0.85,
+      "ndcg@10": 0.8357224139102375,
+      "latency_ms_mean": 38.66565859934781,
+      "latency_ms_p95": 49.86135399667546
+    },
+    "bm25": {
+      "recall@5": 0.95,
+      "recall@10": 1.0,
+      "mrr@10": 0.825,
+      "ndcg@10": 0.8374435600334685,
+      "latency_ms_mean": 6.441240800268133,
+      "latency_ms_p95": 7.38028300111182
+    },
+    "hybrid": {
+      "recall@5": 0.95,
+      "recall@10": 0.95,
+      "mrr@10": 0.95,
+      "ndcg@10": 0.9156918501917485,
+      "latency_ms_mean": 55.790441099816235,
+      "latency_ms_p95": 71.05195999974967
+    }
+  },
+  "per_question": {
+    "dense": [
+      {
+        "id": "h01",
+        "query": "According to Cramer\u2019s epochs of stroke recovery, during which phase does most spontaneous behavioral recovery occur?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h02",
+        "query": "What did early work by William James suggest about the brain\u2019s capacity for change over time?",
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8065735963827293
+      },
+      {
+        "id": "h03",
+        "query": "Which principle explains why neural pathways become more efficient with repeated practice but may be redirected when an activity is abandoned?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h04",
+        "query": "Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas?",
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "mrr@10": 0.0,
+        "ndcg@10": 0.0
+      },
+      {
+        "id": "h05",
+        "query": "In developmental brain formation, what happens to neuronal connections that are rarely utilized?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h06",
+        "query": "Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h07",
+        "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6309297535714575
+      },
+      {
+        "id": "h09",
+        "query": "Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson\u2019s disease?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
+      },
+      {
+        "id": "h10",
+        "query": "Why might two genetically identical individuals still develop different patterns of neural organization?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h11",
+        "query": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      }
+    ],
+    "bm25": [
+      {
+        "id": "h01",
+        "query": "According to Cramer\u2019s epochs of stroke recovery, during which phase does most spontaneous behavioral recovery occur?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h02",
+        "query": "What did early work by William James suggest about the brain\u2019s capacity for change over time?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8503449055347546
+      },
+      {
+        "id": "h03",
+        "query": "Which principle explains why neural pathways become more efficient with repeated practice but may be redirected when an activity is abandoned?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.25,
+        "ndcg@10": 0.43067655807339306
+      },
+      {
+        "id": "h04",
+        "query": "Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas?",
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8315546295836225
+      },
+      {
+        "id": "h05",
+        "query": "In developmental brain formation, what happens to neuronal connections that are rarely utilized?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h06",
+        "query": "Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h07",
+        "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h09",
+        "query": "Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson\u2019s disease?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h10",
+        "query": "Why might two genetically identical individuals still develop different patterns of neural organization?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6309297535714575
+      },
+      {
+        "id": "h11",
+        "query": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6309297535714575
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "h01",
+        "query": "According to Cramer\u2019s epochs of stroke recovery, during which phase does most spontaneous behavioral recovery occur?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h02",
+        "query": "What did early work by William James suggest about the brain\u2019s capacity for change over time?",
+        "recall@5": 0.5,
+        "recall@10": 0.5,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.6131471927654584
+      },
+      {
+        "id": "h03",
+        "query": "Which principle explains why neural pathways become more efficient with repeated practice but may be redirected when an activity is abandoned?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h04",
+        "query": "Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6240505200038379
+      },
+      {
+        "id": "h05",
+        "query": "In developmental brain formation, what happens to neuronal connections that are rarely utilized?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h06",
+        "query": "Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h07",
+        "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h09",
+        "query": "Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson\u2019s disease?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
+      },
+      {
+        "id": "h10",
+        "query": "Why might two genetically identical individuals still develop different patterns of neural organization?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h11",
+        "query": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      }
+    ]
+  }
+}

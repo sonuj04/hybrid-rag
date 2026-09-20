@@ -29,3 +29,4 @@ HYBRID_CANDIDATES = int(os.getenv("HYBRID_CANDIDATES", "50"))
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
 LLM_MODEL = os.getenv("LLM_MODEL", "")
+LLM_TIMEOUT = float(os.getenv("LLM_TIMEOUT", "60"))  # seconds to wait for one LLM reply
