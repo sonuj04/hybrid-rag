@@ -10,6 +10,7 @@ def search_dense(query: str, k: int = config.TOP_K, num_candidates: int = 100) -
     For cosine similarity, Elasticsearch's score is (1 + cosine) / 2, so it lies between 0 and 1.
     """
     es = get_es_client()
+    num_candidates = max(num_candidates, k)  # Elasticsearch requires num_candidates >= k
     response = es.search(
         index=config.ES_INDEX,
         knn={

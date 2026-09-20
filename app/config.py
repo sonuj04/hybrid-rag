@@ -25,7 +25,7 @@ RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "200"))
 TOP_K = int(os.getenv("TOP_K", "5"))
-
+HYBRID_CANDIDATES = int(os.getenv("HYBRID_CANDIDATES", "50"))
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
 LLM_MODEL = os.getenv("LLM_MODEL", "")
