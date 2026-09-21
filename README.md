@@ -127,3 +127,57 @@ Subsets (descriptive only, 18 and 34 questions, no intervals computed):
 - Reranking costs about 50x the latency (44 ms to about 2.4 s mean, 2.8 s p95) on a CPU-only laptop.
 - 52 questions give wide intervals, and 34 of them were drafted by a local LLM from the chunks themselves.
 - Reference-list chunks still appear at lower ranks (for h12, ranks 3 and 5), because ingestion does not separate references from body text.
+
+## Version 4: FastAPI service
+
+Retrieval and question answering are now served over HTTP. The embedding model and the reranker load once at startup, so requests do not pay the model-loading cost. `rerank` is the default retrieval mode (set `DEFAULT_MODE` in `.env` to change it).
+
+Run from the project root:
+
+```bash
+python -m uvicorn app.api:app --port 8000
+```
+
+Interactive docs: `http://localhost:8000/docs`
+
+| endpoint | purpose |
+|---|---|
+| `GET /health` | liveness check |
+| `POST /search` | retrieve chunks. Body: `{"query": "...", "mode": "rerank", "k": 5}` |
+| `POST /ask` | retrieve, then answer with the LLM. Returns the answer and numbered citations |
+
+`mode` is one of `dense`, `bm25`, `hybrid`, `rerank`. `k` is 1 to 20.
+
+Example:
+
+```bash
+curl -s -X POST localhost:8000/ask -H "Content-Type: application/json" \
+  -d '{"query": "What is the duration of the heightened brain activity following a period of being blindfolded?", "k": 5}'
+```
+
+Response (4 of the 5 citations omitted here):
+
+```json
+{
+  "answer": "The heightened brain activity (increased fMRI signal) persisted for at least 30 minutes after re-exposure to light following 60 minutes of blindfolding [1].",
+  "mode": "rerank",
+  "citations": [
+    {"number": 1, "location": "neuroplasticity_11.pdf, page 4", "source": "neuroplasticity_11.pdf", "page": 4, "score": -2.5079569816589355}
+  ]
+}
+```
+
+Notes:
+
+- `citations` lists the retrieved chunks in rank order. The answer marks the ones it used with `[n]`.
+- In `rerank` mode `score` is the raw cross-encoder output, which can be negative. Compare it only within one response, not across modes.
+- A `/search` request in `rerank` mode took about 2.6 s on a CPU-only laptop with the models already loaded (one measurement, not a benchmark).
+
+| status | meaning |
+|---|---|
+| 422 | invalid request (blank query, unknown mode, `k` out of range) |
+| 404 | nothing retrieved (is the index empty?) |
+| 503 | retrieval failed (for example, Elasticsearch is down) |
+| 502 | the LLM call failed |
+
+The suite has 29 tests. The API tests replace retrieval and the LLM with stubs, so they run without Elasticsearch or an API key.
