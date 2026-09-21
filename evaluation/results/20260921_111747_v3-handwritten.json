@@ -1,6 +1,6 @@
 {
-  "label": "handwritten",
-  "timestamp": "20260921_101422",
+  "label": "v3-handwritten",
+  "timestamp": "20260921_111747",
   "num_questions": 18,
   "typos": false,
   "config": {
@@ -15,24 +15,32 @@
       "recall@10": 0.8611111111111112,
       "mrr@10": 0.8611111111111112,
       "ndcg@10": 0.8396192884869699,
-      "latency_ms_mean": 66.70500761214902,
-      "latency_ms_p95": 105.4297860027873
+      "latency_ms_mean": 37.461289331582115,
+      "latency_ms_p95": 42.12922499573324
     },
     "bm25": {
       "recall@5": 0.8888888888888888,
       "recall@10": 0.9166666666666666,
       "mrr@10": 0.8472222222222222,
       "ndcg@10": 0.8326434885055636,
-      "latency_ms_mean": 5.985399555356707,
-      "latency_ms_p95": 7.626737999089528
+      "latency_ms_mean": 5.647408999923048,
+      "latency_ms_p95": 8.002558999578469
     },
     "hybrid": {
       "recall@5": 0.8888888888888888,
       "recall@10": 0.8888888888888888,
       "mrr@10": 0.8796296296296297,
       "ndcg@10": 0.8483369830379413,
-      "latency_ms_mean": 55.19753455559516,
-      "latency_ms_p95": 76.86372000171104
+      "latency_ms_mean": 45.418719721864264,
+      "latency_ms_p95": 56.92491900117602
+    },
+    "rerank": {
+      "recall@5": 0.9444444444444444,
+      "recall@10": 0.9722222222222222,
+      "mrr@10": 1.0,
+      "ndcg@10": 0.9646901450831815,
+      "latency_ms_mean": 2172.415495889355,
+      "latency_ms_p95": 2684.307733004971
     }
   },
   "per_question": {
@@ -432,6 +440,152 @@
         "recall@10": 1.0,
         "mrr@10": 0.3333333333333333,
         "ndcg@10": 0.5
+      },
+      {
+        "id": "h15",
+        "query": "In the ferret model of early damage to primary visual cortex, what abnormality appeared in the retinotopic map of the surviving visually responsive cortex?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h16",
+        "query": "Why is it unclear what extra myelination would achieve in a healthy adult brain?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h17",
+        "query": "After 12-week emotional intelligence training, which cognitive domain showed the largest improvement?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h18",
+        "query": "In the double-blind study of 105 depressed patients, which drug combination gave the highest remission rate?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h19",
+        "query": "What percentage of Parkinson's patients improved right after one session of active-assisted cycling at high cadence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      }
+    ],
+    "rerank": [
+      {
+        "id": "h01",
+        "query": "According to Cramer\u2019s epochs of stroke recovery, during which phase does most spontaneous behavioral recovery occur?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h02",
+        "query": "What did early work by William James suggest about the brain\u2019s capacity for change over time?",
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8315546295836225
+      },
+      {
+        "id": "h03",
+        "query": "Which principle explains why neural pathways become more efficient with repeated practice but may be redirected when an activity is abandoned?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h04",
+        "query": "Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h05",
+        "query": "In developmental brain formation, what happens to neuronal connections that are rarely utilized?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h06",
+        "query": "Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h07",
+        "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
+        "recall@5": 0.5,
+        "recall@10": 0.5,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.6131471927654584
+      },
+      {
+        "id": "h09",
+        "query": "Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson\u2019s disease?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
+      },
+      {
+        "id": "h10",
+        "query": "Why might two genetically identical individuals still develop different patterns of neural organization?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h11",
+        "query": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h12",
+        "query": "During development, which cortical layer in the occipital region thickens to receive signals from the visual pathway?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h13",
+        "query": "Louis Braille shortened the soldiers' 12-dot night-writing code to how many dots?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h14",
+        "query": "Which two things does the brain need continuously for its metabolism, according to the editorial on neuroplasticity's potential?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       },
       {
         "id": "h15",

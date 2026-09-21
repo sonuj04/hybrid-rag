@@ -26,6 +26,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Compare modes in a results file")
     parser.add_argument("results", type=Path)
     parser.add_argument("--metric", choices=METRICS, default=None)
+    parser.add_argument(
+        "--baseline",
+        default=None,
+        help="compare every other mode against this one (positive = better than the baseline)",
+    )
     args = parser.parse_args()
 
     data = json.loads(args.results.read_text(encoding="utf-8"))
@@ -36,7 +41,11 @@ def main() -> None:
     print(f"{args.results.name}: {data['num_questions']} questions")
     for metric in metrics:
         print(f"\n{metric}")
-        for first, second in combinations(modes, 2):
+        if args.baseline:
+            pairs = [(mode, args.baseline) for mode in modes if mode != args.baseline]
+        else:
+            pairs = list(combinations(modes, 2))
+        for first, second in pairs:
             a = [row[metric] for row in per_question[first]]
             b = [row[metric] for row in per_question[second]]
             mean, low, high = bootstrap_diff(a, b)

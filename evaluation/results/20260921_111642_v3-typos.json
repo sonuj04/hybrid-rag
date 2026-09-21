@@ -1,6 +1,6 @@
 {
-  "label": "typos",
-  "timestamp": "20260921_101405",
+  "label": "v3-typos",
+  "timestamp": "20260921_111642",
   "num_questions": 52,
   "typos": true,
   "config": {
@@ -15,24 +15,32 @@
       "recall@10": 0.9423076923076923,
       "mrr@10": 0.8532051282051282,
       "ndcg@10": 0.8604702392938047,
-      "latency_ms_mean": 48.27580909617469,
-      "latency_ms_p95": 65.02852399717085
+      "latency_ms_mean": 35.12588815353341,
+      "latency_ms_p95": 43.00320799666224
     },
     "bm25": {
       "recall@5": 0.8846153846153846,
       "recall@10": 0.9134615384615384,
       "mrr@10": 0.8189102564102565,
       "ndcg@10": 0.8321301470980358,
-      "latency_ms_mean": 4.985805308164204,
-      "latency_ms_p95": 5.7251650068792515
+      "latency_ms_mean": 4.252549654456043,
+      "latency_ms_p95": 5.403672003012616
     },
     "hybrid": {
       "recall@5": 0.9038461538461539,
       "recall@10": 0.9230769230769231,
       "mrr@10": 0.8838141025641026,
       "ndcg@10": 0.8700838737152927,
-      "latency_ms_mean": 48.92653796182108,
-      "latency_ms_p95": 54.51231200277107
+      "latency_ms_mean": 44.53415519240549,
+      "latency_ms_p95": 47.93339400202967
+    },
+    "rerank": {
+      "recall@5": 0.9711538461538461,
+      "recall@10": 1.0,
+      "mrr@10": 0.9546703296703297,
+      "ndcg@10": 0.9553904573814467,
+      "latency_ms_mean": 2364.342697153356,
+      "latency_ms_p95": 2705.1527600051486
     }
   },
   "per_question": {
@@ -1248,6 +1256,424 @@
         "recall@10": 0.0,
         "mrr@10": 0.0,
         "ndcg@10": 0.0
+      },
+      {
+        "id": "h15",
+        "query": "In the ferret model of early damage to primary visual crotex, what abnormality appered in the retinotopic map of the suriving visually responive cortex?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h16",
+        "query": "Why is it unclear what exra myelination would achieve in a healthy adut bain?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h17",
+        "query": "Atfer 12-week emotional intelligence training, which cgonitive domain showed the largest improvement?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h18",
+        "query": "In the double-blind sudy of 105 depressed patients, which drug combination gave the hihest remission rate?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h19",
+        "query": "What perentage of Parkinsons patiets improved right after one session of active-assisted cycling at high cadence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      }
+    ],
+    "rerank": [
+      {
+        "id": "q002",
+        "query": "How did the digit span and track tests measre changes in executive function after eight weeks of stepping exercise?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q005",
+        "query": "What fctors hidner attempts to restore long nevre connections in adults?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q006",
+        "query": "What is a key finding from Zhang et a.l\u2019s meta-analysis regarding interpersonal neural synchronization?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q007",
+        "query": "How does lon-term potentiation in the hippocampus change with elevated corticosteroid levels?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6309297535714575
+      },
+      {
+        "id": "q011",
+        "query": "What is the duraiton of the heightened brian activity following a perod of being blindfolded?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q012",
+        "query": "How does a drug targeting the orexin receptor influence oligodenrdocyte development?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q018",
+        "query": "What relationship did the review by Vald\u00e9s-Tovar et al. (2018) examnie between melatonin and the hippocampus in derpession?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q019",
+        "query": "What specific conections, besides calloal connectoins, reamin inact in \u201creeler\u201d mice?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q020",
+        "query": "What did the fMRI sudy on leraning artiicial characters find abuot participants who peferred the lexical pathway?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q021",
+        "query": "What are the three stages of the gneral adaptive syndrome in response to acute stress?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q028",
+        "query": "What changes in urinary quinolinic acid levls were observed in chidren receivng L. paracasei HII1 supplementation?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q029",
+        "query": "What effects do Donepezil and Memantine have on long-term potntiation?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q030",
+        "query": "How does intense physical activity afefct dopamine levels in individuals with Parkinson\u2019s diesase?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8503449055347546
+      },
+      {
+        "id": "q032",
+        "query": "What was a comon purpose of trephination in ancient North Afircan tribes?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q039",
+        "query": "What did the neurophyiological and fMRI sutdy indicate about macaque V1 responsiveness after a retnial lesion?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q040",
+        "query": "How many synapses does a neron typically possess at birth?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q041",
+        "query": "What is the primary brain region involved in achieving long-term lnguage recovey afer damgae?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6309297535714575
+      },
+      {
+        "id": "q042",
+        "query": "What are the drawbacks of using germ-free anial moedls to investigate the relationship between gut microbiota and neuroplasticity?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q043",
+        "query": "What was the obsrved reducton in P75 Ectodomain levels found in the CSF and barin of A\u03b2 transgenic AD mice?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q047",
+        "query": "What happens to the number of callosal axons between visual araes 17 and 18 in cats rasied with binocular eyelid suture?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q048",
+        "query": "How did Tu et al. investigate brain anatomical changes rlated to learning Chinese as a sceond langugae?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q053",
+        "query": "How did benzodiazepnes restre ocular dominance plasticity in mice lacikng a GABA-synthesizing enzyme?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q055",
+        "query": "What was the key finding of Godekce et al\u2019.s 2012 study rgearding the timing of aphasia therapy after a stroke?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q058",
+        "query": "What is the effect of high-intensity physical actiity on tremor reduction in Parkinson's disesae patients?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
+      },
+      {
+        "id": "q060",
+        "query": "What is the observed level of BDNF in paients with anorexa nervosa?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q063",
+        "query": "What symptoms arise from elevated CREB leves in the nuceus acumbens?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q064",
+        "query": "What was the percentage diffeernce in recovery ties obsered bewteen individuals in the highest and lowest emotional intelligence qurtiles?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q066",
+        "query": "What did a twin study find about hippocampal atrpohy in demeted twns compared with controls?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q069",
+        "query": "What is the conesquence of glutamae release onto naerby neurons flolowing a netork damage event?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q070",
+        "query": "Which metabolites made from tryptophan by gut baceria modulate serootnin synthesis, glutamatergic signailng and neuroinflammation?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q072",
+        "query": "What changes in restnig-state functional conenctivity of motor circuits were seen in parkinsonian rats after logn-term physical training?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q075",
+        "query": "What BOLD singal cahnges were observed in V1, V2, V3, and V4 following to-hour periods of monoular deprivation?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q076",
+        "query": "Whcih brain rgeion sowed decreased activation in Chinese dyslexics with deayed phonological reading development?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "q080",
+        "query": "What was the total effective rate of fluoxetine accoring to Duan et al. (2009)?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h01",
+        "query": "According to Cramer\u2019s epochs of stroke recovery, during which phase does most spontaneous behvioral rceovery occur?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h02",
+        "query": "What did early work by William James suggest abot the bran\u2019s capacity for change over time?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8772153153380493
+      },
+      {
+        "id": "h03",
+        "query": "Which principle explains why neural pathways become more eficient with repated practice but may be redirected when an activity is abandoned?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h04",
+        "query": "Which scientit demonstrated that undamaged brin regions coud assume functions previously carried out by ijured araes?",
+        "recall@5": 0.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.14285714285714285,
+        "ndcg@10": 0.3889580943680543
+      },
+      {
+        "id": "h05",
+        "query": "In developmental brain formation, what hapens to neuroal connections that are rarley utilized?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h06",
+        "query": "Wihch two tanscription factors help deetrmine whether deeloping cortical rgeions acquire motor or visul functions?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h07",
+        "query": "In rodents, which barin procses appears to stay plastic in both development and adulthood?",
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.8315546295836225
+      },
+      {
+        "id": "h09",
+        "query": "Which seurm neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson\u2019s disaese?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
+      },
+      {
+        "id": "h10",
+        "query": "Why might two geneitcally identiacl individuals sitll dveelop different patterns of neural organization?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h11",
+        "query": "Wich emotion-related brain region was slighly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h12",
+        "query": "During development, which crotical lyer in the occpital region thickens to receive signals from the visual pathwy?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h13",
+        "query": "Luois Braille sohrtened the soliders' 12-dot night-writing code to how many dots?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h14",
+        "query": "Which two things does the brain need continuously for its mtabolism, accordng to the editorial on neuroplasticity's potenial?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.5,
+        "ndcg@10": 0.6309297535714575
       },
       {
         "id": "h15",
