@@ -14,43 +14,51 @@ with cited answers from an LLM.
 
 ## Retrieval evaluation
 
-Corpus: 15 neuroplasticity papers (868 chunks). Questions: 44 (34 drafted by an LLM from random passages and reviewed by hand, 10 written by hand). A retrieved chunk counts as correct if it comes from a labelled paper and page. Latency was measured on a laptop CPU with one Elasticsearch node.
+Corpus: 15 neuroplasticity papers (868 chunks). Questions: 52 (34 drafted by an LLM from random passages and reviewed by hand, 18 written by hand). A retrieved chunk counts as correct if it comes from a labelled paper and page. Latency was measured on a laptop CPU with one Elasticsearch node.
 
-Clean questions (n = 44):
-
-| Retriever | Recall@5 | Recall@10 | MRR@10 | nDCG@10 | Latency mean / p95 (ms) |
-|---|---|---|---|---|---|
-| Dense | 0.955 | 0.966 | 0.898 | 0.907 | 37 / 45 |
-| BM25 | 0.966 | 0.977 | 0.877 | 0.893 | 6 / 6 |
-| Hybrid (RRF) | 0.955 | 0.989 | 0.931 | 0.931 | 49 / 59 |
-
-Same questions with typos added to the queries (n = 44):
+Clean questions (n = 52):
 
 | Retriever | Recall@5 | Recall@10 | MRR@10 | nDCG@10 | Latency mean / p95 (ms) |
 |---|---|---|---|---|---|
-| Dense | 0.932 | 0.966 | 0.838 | 0.857 | 39 / 45 |
-| BM25 | 0.898 | 0.909 | 0.769 | 0.800 | 5 / 6 |
-| Hybrid (RRF) | 0.943 | 0.966 | 0.882 | 0.885 | 48 / 55 |
+| Dense | 0.933 | 0.942 | 0.913 | 0.909 | 46 / 60 |
+| BM25 | 0.942 | 0.952 | 0.909 | 0.905 | 6 / 8 |
+| Hybrid (RRF) | 0.933 | 0.962 | 0.932 | 0.919 | 46 / 50 |
 
-Paired bootstrap comparisons over questions (n = 44; 95% confidence interval of the difference):
+Same questions with typos added to the queries (n = 52):
+
+| Retriever | Recall@5 | Recall@10 | MRR@10 | nDCG@10 | Latency mean / p95 (ms) |
+|---|---|---|---|---|---|
+| Dense | 0.923 | 0.942 | 0.853 | 0.860 | 48 / 65 |
+| BM25 | 0.885 | 0.913 | 0.819 | 0.832 | 5 / 6 |
+| Hybrid (RRF) | 0.904 | 0.923 | 0.884 | 0.870 | 49 / 55 |
+
+Drafted questions (n = 34) vs hand-written questions (n = 18), clean queries:
+
+| Retriever | Drafted Recall@5 | Drafted MRR@10 | Hand-written Recall@5 | Hand-written MRR@10 |
+|---|---|---|---|---|
+| Dense | 0.985 | 0.941 | 0.833 | 0.861 |
+| BM25 | 0.971 | 0.941 | 0.889 | 0.847 |
+| Hybrid (RRF) | 0.956 | 0.960 | 0.889 | 0.880 |
+
+Paired bootstrap comparisons over questions (n = 52; difference and 95% confidence interval):
 
 | Comparison | Queries | Metric | Difference | 95% CI |
 |---|---|---|---|---|
-| Hybrid - BM25 | with typos | MRR@10 | +0.113 | +0.041 to +0.191 |
-| Hybrid - BM25 | with typos | nDCG@10 | +0.084 | +0.013 to +0.162 |
-| Hybrid - Dense | with typos | MRR@10 | +0.044 | -0.045 to +0.133 |
-| Hybrid - Dense | clean | MRR@10 | +0.034 | -0.031 to +0.095 |
-| Hybrid - BM25 | clean | MRR@10 | +0.054 | -0.008 to +0.120 |
-| Dense - BM25 | clean | MRR@10 | +0.021 | -0.081 to +0.119 |
+| Hybrid - Dense | clean | MRR@10 | +0.019 | -0.043 to +0.077 |
+| Hybrid - BM25 | clean | MRR@10 | +0.024 | -0.045 to +0.090 |
+| Dense - BM25 | clean | MRR@10 | +0.005 | -0.096 to +0.106 |
+| Hybrid - Dense | with typos | MRR@10 | +0.031 | -0.044 to +0.108 |
+| Hybrid - BM25 | with typos | MRR@10 | +0.065 | -0.010 to +0.142 |
+| Dense - BM25 | with typos | Recall@5 | +0.038 | -0.058 to +0.144 |
 
 What the results show:
 
-- On clean questions the three retrievers cannot be told apart: every confidence interval includes zero, and all three place the right page in the top 5 for about 95-97% of questions.
-- With typos in the queries, hybrid retrieval ranks the correct page significantly higher than BM25 alone (MRR@10 +0.113, nDCG@10 +0.084; both intervals exclude zero). Hybrid was nominally ahead of dense retrieval (MRR@10 +0.044), but that difference is within noise.
-- Remaining failure: the question "What is the duration of the heightened brain activity following a period of being blindfolded?" has almost no key words in common with the passage, which says the signal "persisted for at least 30 min". BM25 does not retrieve the page in its top 10, dense search ranks it within its top 5, and fusion pushes it to rank 7 because pages ranked moderately by both retrievers outscore a page ranked well by only one.
-- Only four questions separate the retrievers on recall@5 (q011, q075, h02, h04), which is why the clean-question differences should not be over-read.
+- On this question set the three retrievers cannot be told apart. Every confidence interval on the differences includes zero, for clean queries and queries with typos, on all four metrics.
+- Point estimates only: hybrid has the highest MRR@10 on clean queries (0.932 vs 0.913 dense and 0.909 BM25) and with typos (0.884 vs 0.853 and 0.819). BM25 has the lowest score on all four metrics with typos. MRR@10 dropped by 0.048 for hybrid, 0.060 for dense and 0.090 for BM25 when typos were added, but these drops were not tested formally.
+- All three retrievers score lower on the 18 hand-written questions (recall@5 0.83 to 0.89) than on the 34 drafted questions (0.96 to 0.99). This suggests drafted questions, which reuse the passage wording, flatter the clean scores. With 18 questions one question is worth 0.056, so the retrievers cannot be ranked on that subset.
+- Two questions are missed completely by hybrid, and both are paraphrase gaps. "What is the duration of the heightened brain activity following a period of being blindfolded?" shares almost no words with the passage ("persisted for at least 30 min"), and "which cortical layer ... thickens" does not match "the fourth layer of cortex hypertrophies". In the second case, two of the top three results are reference-list chunks. The rest of hybrid's lost recall is half credit on questions with two labelled pages.
 
-Limits: 44 questions on one small corpus, one labeller, and many questions are drafted from the passages they are then tested against. Many comparisons were computed and the intervals ignore that several questions share pages, so the two significant results are moderate evidence, and MRR and nDCG are correlated, so they count as one finding.
+Limits: 52 questions on one small corpus and one labeller. 34 questions were drafted by an LLM from the passages they are tested against. Several questions share pages, so the intervals are somewhat optimistic, and many comparisons were computed.
 
 ## Reproduce
 
