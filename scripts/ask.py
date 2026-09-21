@@ -16,7 +16,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Ask a question about your documents")
     parser.add_argument("question")
     parser.add_argument("--k", type=int, default=config.TOP_K, help="number of chunks to retrieve")
-    parser.add_argument("--mode", choices=MODES, default="hybrid", help="retrieval mode")
+    parser.add_argument("--mode", choices=MODES, default=config.DEFAULT_MODE, help="retrieval mode")
     parser.add_argument("--show-context", action="store_true", help="print the retrieved chunks")
     args = parser.parse_args()
 
