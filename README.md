@@ -68,3 +68,62 @@ python -m scripts.evaluate --label baseline
 python -m scripts.evaluate --typos --label typos
 python -m scripts.compare_runs evaluation/results/<results file>.json
 ```
+
+## Cross-encoder reranking
+
+Hybrid retrieval scores the query and each chunk separately. A cross-encoder (`cross-encoder/ms-marco-MiniLM-L-6-v2`) reads the query and one chunk together, which is slower but more precise. Version 3 takes hybrid's top 30 candidates, reranks them and returns the top k. It is a fourth retrieval mode, `rerank`, so the same evaluation compares all four modes. Nothing was tuned: default model, 30 candidates.
+
+### Results on 52 questions (34 drafted with a local LLM, 18 hand-written)
+
+Clean queries:
+
+| mode | recall@5 | recall@10 | MRR@10 | nDCG@10 | latency ms (mean / p95) |
+|---|---|---|---|---|---|
+| dense | 0.933 | 0.942 | 0.913 | 0.909 | 49 / 63 |
+| bm25 | 0.942 | 0.952 | 0.909 | 0.905 | 5 / 6 |
+| hybrid | 0.933 | 0.962 | 0.932 | 0.919 | 44 / 50 |
+| rerank | 0.981 | 0.990 | 0.986 | 0.973 | 2379 / 2801 |
+
+Queries with typos:
+
+| mode | recall@5 | recall@10 | MRR@10 | nDCG@10 | latency ms (mean / p95) |
+|---|---|---|---|---|---|
+| dense | 0.923 | 0.942 | 0.853 | 0.860 | 35 / 43 |
+| bm25 | 0.885 | 0.913 | 0.819 | 0.832 | 4 / 5 |
+| hybrid | 0.904 | 0.923 | 0.884 | 0.870 | 45 / 48 |
+| rerank | 0.971 | 1.000 | 0.955 | 0.955 | 2364 / 2705 |
+
+### Rerank vs hybrid, paired bootstrap, 95% interval
+
+| queries | metric | rerank - hybrid | 95% CI | excludes 0 |
+|---|---|---|---|---|
+| clean | recall@5 | +0.048 | [+0.000, +0.106] | no |
+| clean | recall@10 | +0.029 | [+0.000, +0.077] | no |
+| clean | MRR@10 | +0.053 | [-0.010, +0.123] | no |
+| clean | nDCG@10 | +0.054 | [+0.001, +0.114] | barely |
+| typos | recall@5 | +0.067 | [+0.000, +0.144] | no |
+| typos | recall@10 | +0.077 | [+0.019, +0.144] | yes |
+| typos | MRR@10 | +0.071 | [+0.009, +0.144] | yes |
+| typos | nDCG@10 | +0.085 | [+0.030, +0.149] | yes |
+
+Subsets (descriptive only, 18 and 34 questions, no intervals computed):
+
+| subset | mode | recall@5 | recall@10 | MRR@10 | nDCG@10 |
+|---|---|---|---|---|---|
+| hand-written (18) | hybrid | 0.889 | 0.889 | 0.880 | 0.848 |
+| hand-written (18) | rerank | 0.944 | 0.972 | 1.000 | 0.965 |
+| drafted (34) | hybrid | 0.956 | 1.000 | 0.960 | 0.957 |
+| drafted (34) | rerank | 1.000 | 1.000 | 0.978 | 0.977 |
+
+### What the evidence supports
+
+- On queries with typos, reranking improves recall@10, MRR@10 and nDCG@10 over hybrid; all three intervals exclude 0.
+- On clean queries the differences point the same way, but only nDCG@10 excludes 0, and only barely. The other clean-query differences are within noise.
+- Dense, BM25 and hybrid are not distinguishable from each other on this question set.
+- Both failure cases moved to rank 1 with reranking: q011 (`neuroplasticity_11.pdf`, page 4) and h12 (`neuroplasticity_13.pdf`, page 2). Neither was in hybrid's top 5.
+
+### Limitations
+
+- Reranking costs about 50x the latency (44 ms to about 2.4 s mean, 2.8 s p95) on a CPU-only laptop.
+- 52 questions give wide intervals, and 34 of them were drafted by a local LLM from the chunks themselves.
+- Reference-list chunks still appear at lower ranks (for h12, ranks 3 and 5), because ingestion does not separate references from body text.
