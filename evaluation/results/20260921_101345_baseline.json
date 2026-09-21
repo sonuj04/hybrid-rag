@@ -1,7 +1,7 @@
 {
   "label": "baseline",
-  "timestamp": "20260920_230447",
-  "num_questions": 44,
+  "timestamp": "20260921_101345",
+  "num_questions": 52,
   "typos": false,
   "config": {
     "embedding_model": "BAAI/bge-small-en-v1.5",
@@ -11,28 +11,28 @@
   },
   "results": {
     "dense": {
-      "recall@5": 0.9545454545454546,
-      "recall@10": 0.9659090909090909,
-      "mrr@10": 0.8977272727272727,
-      "ndcg@10": 0.9067892207771411,
-      "latency_ms_mean": 36.6012308410394,
-      "latency_ms_p95": 44.85240100257215
+      "recall@5": 0.9326923076923077,
+      "recall@10": 0.9423076923076923,
+      "mrr@10": 0.9134615384615384,
+      "ndcg@10": 0.9085218108894063,
+      "latency_ms_mean": 45.91789948118765,
+      "latency_ms_p95": 59.659407001163345
     },
     "bm25": {
-      "recall@5": 0.9659090909090909,
-      "recall@10": 0.9772727272727273,
-      "mrr@10": 0.8768939393939394,
-      "ndcg@10": 0.8926220438626946,
-      "latency_ms_mean": 5.570813749975721,
-      "latency_ms_p95": 6.211111998709384
+      "recall@5": 0.9423076923076923,
+      "recall@10": 0.9519230769230769,
+      "mrr@10": 0.9086538461538461,
+      "ndcg@10": 0.9047380462447941,
+      "latency_ms_mean": 5.5106308273724816,
+      "latency_ms_p95": 8.27924199984409
     },
     "hybrid": {
-      "recall@5": 0.9545454545454546,
-      "recall@10": 0.9886363636363636,
-      "mrr@10": 0.9312770562770563,
-      "ndcg@10": 0.9311262504792488,
-      "latency_ms_mean": 48.70412429533065,
-      "latency_ms_p95": 59.15729700063821
+      "recall@5": 0.9326923076923077,
+      "recall@10": 0.9615384615384616,
+      "mrr@10": 0.9322344322344323,
+      "ndcg@10": 0.9190618084341793,
+      "latency_ms_mean": 45.76948265373805,
+      "latency_ms_p95": 49.815679994935635
     }
   },
   "per_question": {
@@ -43,7 +43,7 @@
         "recall@5": 1.0,
         "recall@10": 1.0,
         "mrr@10": 1.0,
-        "ndcg@10": 1.0
+        "ndcg@10": 0.8503449055347546
       },
       {
         "id": "q005",
@@ -58,8 +58,8 @@
         "query": "What is a key finding from Zhang et al.\u2019s meta-analysis regarding interpersonal neural synchronization?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.5,
-        "ndcg@10": 0.6309297535714575
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       },
       {
         "id": "q007",
@@ -202,8 +202,8 @@
         "query": "How did Tu et al. investigate brain anatomical changes related to learning Chinese as a second language?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.5,
-        "ndcg@10": 0.6309297535714575
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       },
       {
         "id": "q053",
@@ -360,10 +360,10 @@
       {
         "id": "h07",
         "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
-        "recall@5": 1.0,
-        "recall@10": 1.0,
+        "recall@5": 0.5,
+        "recall@10": 0.5,
         "mrr@10": 0.5,
-        "ndcg@10": 0.6309297535714575
+        "ndcg@10": 0.38685280723454163
       },
       {
         "id": "h09",
@@ -384,6 +384,70 @@
       {
         "id": "h11",
         "query": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h12",
+        "query": "During development, which cortical layer in the occipital region thickens to receive signals from the visual pathway?",
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "mrr@10": 0.0,
+        "ndcg@10": 0.0
+      },
+      {
+        "id": "h13",
+        "query": "Louis Braille shortened the soldiers' 12-dot night-writing code to how many dots?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h14",
+        "query": "Which two things does the brain need continuously for its metabolism, according to the editorial on neuroplasticity's potential?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h15",
+        "query": "In the ferret model of early damage to primary visual cortex, what abnormality appeared in the retinotopic map of the surviving visually responsive cortex?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h16",
+        "query": "Why is it unclear what extra myelination would achieve in a healthy adult brain?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h17",
+        "query": "After 12-week emotional intelligence training, which cognitive domain showed the largest improvement?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h18",
+        "query": "In the double-blind study of 105 depressed patients, which drug combination gave the highest remission rate?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h19",
+        "query": "What percentage of Parkinson's patients improved right after one session of active-assisted cycling at high cadence?",
         "recall@5": 1.0,
         "recall@10": 1.0,
         "mrr@10": 1.0,
@@ -412,8 +476,8 @@
         "query": "What is a key finding from Zhang et al.\u2019s meta-analysis regarding interpersonal neural synchronization?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.3333333333333333,
-        "ndcg@10": 0.5
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
       },
       {
         "id": "q007",
@@ -556,8 +620,8 @@
         "query": "How did Tu et al. investigate brain anatomical changes related to learning Chinese as a second language?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.5,
-        "ndcg@10": 0.6309297535714575
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       },
       {
         "id": "q053",
@@ -580,8 +644,8 @@
         "query": "What is the effect of high-intensity physical activity on tremor reduction in Parkinson's disease patients?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.5,
-        "ndcg@10": 0.6309297535714575
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       },
       {
         "id": "q060",
@@ -714,10 +778,10 @@
       {
         "id": "h07",
         "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
-        "recall@5": 1.0,
-        "recall@10": 1.0,
+        "recall@5": 0.5,
+        "recall@10": 0.5,
         "mrr@10": 1.0,
-        "ndcg@10": 1.0
+        "ndcg@10": 0.6131471927654584
       },
       {
         "id": "h09",
@@ -742,6 +806,70 @@
         "recall@10": 1.0,
         "mrr@10": 0.5,
         "ndcg@10": 0.6309297535714575
+      },
+      {
+        "id": "h12",
+        "query": "During development, which cortical layer in the occipital region thickens to receive signals from the visual pathway?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h13",
+        "query": "Louis Braille shortened the soldiers' 12-dot night-writing code to how many dots?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h14",
+        "query": "Which two things does the brain need continuously for its metabolism, according to the editorial on neuroplasticity's potential?",
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "mrr@10": 0.0,
+        "ndcg@10": 0.0
+      },
+      {
+        "id": "h15",
+        "query": "In the ferret model of early damage to primary visual cortex, what abnormality appeared in the retinotopic map of the surviving visually responsive cortex?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h16",
+        "query": "Why is it unclear what extra myelination would achieve in a healthy adult brain?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h17",
+        "query": "After 12-week emotional intelligence training, which cognitive domain showed the largest improvement?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h18",
+        "query": "In the double-blind study of 105 depressed patients, which drug combination gave the highest remission rate?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h19",
+        "query": "What percentage of Parkinson's patients improved right after one session of active-assisted cycling at high cadence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       }
     ],
     "hybrid": [
@@ -751,7 +879,7 @@
         "recall@5": 1.0,
         "recall@10": 1.0,
         "mrr@10": 1.0,
-        "ndcg@10": 1.0
+        "ndcg@10": 0.9197207891481876
       },
       {
         "id": "q005",
@@ -766,8 +894,8 @@
         "query": "What is a key finding from Zhang et al.\u2019s meta-analysis regarding interpersonal neural synchronization?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.3333333333333333,
-        "ndcg@10": 0.5
+        "mrr@10": 1.0,
+        "ndcg@10": 0.9197207891481876
       },
       {
         "id": "q007",
@@ -910,8 +1038,8 @@
         "query": "How did Tu et al. investigate brain anatomical changes related to learning Chinese as a second language?",
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "mrr@10": 0.5,
-        "ndcg@10": 0.6309297535714575
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
       },
       {
         "id": "q053",
@@ -1068,10 +1196,10 @@
       {
         "id": "h07",
         "query": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
-        "recall@5": 1.0,
-        "recall@10": 1.0,
+        "recall@5": 0.5,
+        "recall@10": 0.5,
         "mrr@10": 1.0,
-        "ndcg@10": 1.0
+        "ndcg@10": 0.6131471927654584
       },
       {
         "id": "h09",
@@ -1092,6 +1220,70 @@
       {
         "id": "h11",
         "query": "Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h12",
+        "query": "During development, which cortical layer in the occipital region thickens to receive signals from the visual pathway?",
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "mrr@10": 0.0,
+        "ndcg@10": 0.0
+      },
+      {
+        "id": "h13",
+        "query": "Louis Braille shortened the soldiers' 12-dot night-writing code to how many dots?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h14",
+        "query": "Which two things does the brain need continuously for its metabolism, according to the editorial on neuroplasticity's potential?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.3333333333333333,
+        "ndcg@10": 0.5
+      },
+      {
+        "id": "h15",
+        "query": "In the ferret model of early damage to primary visual cortex, what abnormality appeared in the retinotopic map of the surviving visually responsive cortex?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h16",
+        "query": "Why is it unclear what extra myelination would achieve in a healthy adult brain?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h17",
+        "query": "After 12-week emotional intelligence training, which cognitive domain showed the largest improvement?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h18",
+        "query": "In the double-blind study of 105 depressed patients, which drug combination gave the highest remission rate?",
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0
+      },
+      {
+        "id": "h19",
+        "query": "What percentage of Parkinson's patients improved right after one session of active-assisted cycling at high cadence?",
         "recall@5": 1.0,
         "recall@10": 1.0,
         "mrr@10": 1.0,

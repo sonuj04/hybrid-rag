@@ -1,9 +1,9 @@
 # One question per line. DELETE the lines you do not want. Edit question text in place.
 # Add your own questions at the bottom, like:  h01 | your question | file.pdf:3
 
-q002 | How did the digit span and track tests measure changes in executive function after eight weeks of stepping exercise?
+q002 | How did the digit span and track tests measure changes in executive function after eight weeks of stepping exercise? | neuroplasticity_6.pdf:4; neuroplasticity_6.pdf:3
 q005 | What factors hinder attempts to restore long nerve connections in adults?
-q006 | What is a key finding from Zhang et al.’s meta-analysis regarding interpersonal neural synchronization?
+q006 | What is a key finding from Zhang et al.’s meta-analysis regarding interpersonal neural synchronization? | neuroplasticity_5.pdf:1; neuroplasticity_5.pdf:2
 q007 | How does long-term potentiation in the hippocampus change with elevated corticosteroid levels?
 q011 | What is the duration of the heightened brain activity following a period of being blindfolded?
 q012 | How does a drug targeting the orexin receptor influence oligodendrocyte development?
@@ -21,10 +21,10 @@ q041 | What is the primary brain region involved in achieving long-term language
 q042 | What are the drawbacks of using germ-free animal models to investigate the relationship between gut microbiota and neuroplasticity?
 q043 | What was the observed reduction in P75 Ectodomain levels found in the CSF and brain of Aβ transgenic AD mice?
 q047 | What happens to the number of callosal axons between visual areas 17 and 18 in cats raised with binocular eyelid suture?
-q048 | How did Tu et al. investigate brain anatomical changes related to learning Chinese as a second language?
+q048 | How did Tu et al. investigate brain anatomical changes related to learning Chinese as a second language? | neuroplasticity_5.pdf:1; neuroplasticity_5.pdf:2
 q053 | How did benzodiazepines restore ocular dominance plasticity in mice lacking a GABA-synthesizing enzyme?
 q055 | What was the key finding of Godecke et al.’s 2012 study regarding the timing of aphasia therapy after a stroke?
-q058 | What is the effect of high-intensity physical activity on tremor reduction in Parkinson's disease patients?
+q058 | What is the effect of high-intensity physical activity on tremor reduction in Parkinson's disease patients? | neuroplasticity_6.pdf:4; neuroplasticity_6.pdf:3
 q060 | What is the observed level of BDNF in patients with anorexia nervosa?
 q063 | What symptoms arise from elevated CREB levels in the nucleus accumbens?
 q064 | What was the percentage difference in recovery times observed between individuals in the highest and lowest emotional intelligence quartiles?
@@ -41,7 +41,15 @@ h03 | Which principle explains why neural pathways become more efficient with re
 h04 | Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas? | neuroplasticity_13.pdf:1; neuroplasticity_8.pdf:2
 h05 | In developmental brain formation, what happens to neuronal connections that are rarely utilized? | neuroplasticity_14.pdf:2
 h06 | Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions? | neuroplasticity_14.pdf:2
-h07 | In rodents, which brain process appears to stay plastic in both development and adulthood? | neuroplasticity_12.pdf:1
+h07 | In rodents, which brain process appears to stay plastic in both development and adulthood? | neuroplasticity_12.pdf:1; neuroplasticity_12.pdf:8
 h09 | Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson’s disease? | neuroplasticity_6.pdf:1; neuroplasticity_6.pdf:2
 h10 | Why might two genetically identical individuals still develop different patterns of neural organization? | neuroplasticity_7.pdf:2
 h11 | Which emotion-related brain region was slightly smaller, rather than larger, in people with high emotional intelligence? | neuroplasticity_9.pdf:3
+h12 | During development, which cortical layer in the occipital region thickens to receive signals from the visual pathway? | neuroplasticity_13.pdf:2
+h13 | Louis Braille shortened the soldiers' 12-dot night-writing code to how many dots? | neuroplasticity_13.pdf:3
+h14 | Which two things does the brain need continuously for its metabolism, according to the editorial on neuroplasticity's potential? | neuroplasticity_14.pdf:3
+h15 | In the ferret model of early damage to primary visual cortex, what abnormality appeared in the retinotopic map of the surviving visually responsive cortex? | neuroplasticity_12.pdf:7
+h16 | Why is it unclear what extra myelination would achieve in a healthy adult brain? | neuroplasticity_12.pdf:8
+h17 | After 12-week emotional intelligence training, which cognitive domain showed the largest improvement? | neuroplasticity_9.pdf:5
+h18 | In the double-blind study of 105 depressed patients, which drug combination gave the highest remission rate? | neuroplasticity_7.pdf:3
+h19 | What percentage of Parkinson's patients improved right after one session of active-assisted cycling at high cadence? | neuroplasticity_6.pdf:3

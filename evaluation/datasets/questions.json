@@ -6,6 +6,10 @@
       {
         "source": "neuroplasticity_6.pdf",
         "page": 4
+      },
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 3
       }
     ]
   },
@@ -26,6 +30,10 @@
       {
         "source": "neuroplasticity_5.pdf",
         "page": 1
+      },
+      {
+        "source": "neuroplasticity_5.pdf",
+        "page": 2
       }
     ]
   },
@@ -210,6 +218,10 @@
       {
         "source": "neuroplasticity_5.pdf",
         "page": 1
+      },
+      {
+        "source": "neuroplasticity_5.pdf",
+        "page": 2
       }
     ]
   },
@@ -240,6 +252,10 @@
       {
         "source": "neuroplasticity_6.pdf",
         "page": 4
+      },
+      {
+        "source": "neuroplasticity_6.pdf",
+        "page": 3
       }
     ]
   },
@@ -422,6 +438,10 @@
       {
         "source": "neuroplasticity_12.pdf",
         "page": 1
+      },
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 8
       }
     ]
   },
@@ -455,6 +475,86 @@
     "relevant": [
       {
         "source": "neuroplasticity_9.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "h12",
+    "question": "During development, which cortical layer in the occipital region thickens to receive signals from the visual pathway?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_13.pdf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "h13",
+    "question": "Louis Braille shortened the soldiers' 12-dot night-writing code to how many dots?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_13.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "h14",
+    "question": "Which two things does the brain need continuously for its metabolism, according to the editorial on neuroplasticity's potential?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_14.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "h15",
+    "question": "In the ferret model of early damage to primary visual cortex, what abnormality appeared in the retinotopic map of the surviving visually responsive cortex?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "h16",
+    "question": "Why is it unclear what extra myelination would achieve in a healthy adult brain?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_12.pdf",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "h17",
+    "question": "After 12-week emotional intelligence training, which cognitive domain showed the largest improvement?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_9.pdf",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "h18",
+    "question": "In the double-blind study of 105 depressed patients, which drug combination gave the highest remission rate?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_7.pdf",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "h19",
+    "question": "What percentage of Parkinson's patients improved right after one session of active-assisted cycling at high cadence?",
+    "relevant": [
+      {
+        "source": "neuroplasticity_6.pdf",
         "page": 3
       }
     ]
