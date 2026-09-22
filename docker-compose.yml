@@ -1,0 +1,42 @@
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: hybrid-rag-es
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    # No ports: mapped on purpose — only the api service talks to this,
+    # over the compose network, so it can't collide with your other
+    # Elasticsearch container already using host port 9200.
+
+  api:
+    build: .
+    container_name: hybrid-rag-api
+    env_file: .env
+    environment:
+      # These override .env so the container always talks to the
+      # compose Elasticsearch, with no auth and no cert, regardless
+      # of what your host .env has for local (non-Docker) runs.
+      - ES_URL=http://es:9200
+      - ES_PASSWORD=
+      - ES_CA_CERT=
+    depends_on:
+      es:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/raw:/app/data/raw:ro
+      - hf-cache:/root/.cache/huggingface
+
+volumes:
+  es-data:
+  hf-cache:
