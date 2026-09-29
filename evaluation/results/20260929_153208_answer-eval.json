@@ -1,0 +1,131 @@
+{
+  "timestamp": "20260929_153208",
+  "mode": "rerank",
+  "k": 5,
+  "stop_reason": false,
+  "summary": {
+    "citation_validity_rate": 1.0,
+    "groundedness_rate": 1.0,
+    "refusal_rate": 1.0
+  },
+  "answerable": [
+    {
+      "id": "h01",
+      "question": "According to Cramer\u2019s epochs of stroke recovery, during which phase does most spontaneous behavioral recovery occur?",
+      "answer": "According to Cramer\u2019s epochs of stroke recovery, most spontaneous behavioral recovery occurs during the repair phase, which lasts from the first days after stroke onset for several weeks [1].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer accurately states that spontaneous behavioral recovery occurs during the repair phase, as described in source [1]."
+    },
+    {
+      "id": "h02",
+      "question": "What did early work by William James suggest about the brain\u2019s capacity for change over time?",
+      "answer": "William James suggested that the human brain is capable of continuous functional changes [1][2]. He also implied that the brain has a capacity to alter its functions [4], and that these continuous neuronal changes are perpetual [3].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "All claims in the answer are directly supported by the source passages."
+    },
+    {
+      "id": "h03",
+      "question": "Which principle explains why neural pathways become more efficient with repeated practice but may be redirected when an activity is abandoned?",
+      "answer": "The \"use it or lose it\" principle explains that while repeated practice forms and strengthens neuronal circuits to improve performance, the brain will redirect these circuits if the activity is no longer practiced [1].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer accurately reflects the information in source [1] regarding the 'use it or lose it' principle and its explanation of how the brain redirects circuits when an activity is abandoned."
+    },
+    {
+      "id": "h04",
+      "question": "Which scientist demonstrated that undamaged brain regions could assume functions previously carried out by injured areas?",
+      "answer": "Paul Bach-y-Rita is the pioneer who demonstrated that healthy regions of the brain can take over the functions of injured parts [1][3].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer accurately reflects the information presented in source [1] and [2] regarding Paul Bach-y-Rita's work on neuroplasticity."
+    },
+    {
+      "id": "h05",
+      "question": "In developmental brain formation, what happens to neuronal connections that are rarely utilized?",
+      "answer": "During the process of neurogenesis, the brain eliminates all connections that are rarely used [1].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer directly states that the brain eliminates connections that are rarely used, which is explicitly stated in source [1]."
+    },
+    {
+      "id": "h06",
+      "question": "Which two transcription factors help determine whether developing cortical regions acquire motor or visual functions?",
+      "answer": "The two transcription factors that help determine whether developing cortical regions acquire motor or visual functions are Emx2 and Pax6 [1][2].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer accurately states that Emx2 and Pax6 are the two transcription factors that determine motor or visual function in developing cortical regions, and this information is directly supported by passages [1] and [2]."
+    },
+    {
+      "id": "h07",
+      "question": "In rodents, which brain process appears to stay plastic in both development and adulthood?",
+      "answer": "In rodents, myelination appears to be plastic in both development and adulthood [1].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer accurately reflects the statement that myelination appears to be plastic in both development and adulthood, as stated in source [1]."
+    },
+    {
+      "id": "h09",
+      "question": "Which serum neurotrophic factor was reported to increase after intense aerobic exercise in people with Parkinson\u2019s disease?",
+      "answer": "Intense aerobic exercise has been reported to increase serum BDNF levels in patients with Parkinson\u2019s disease [1][2][3].",
+      "citations_valid": true,
+      "invalid_citations": [],
+      "grounded": true,
+      "unsupported_claims": [],
+      "judge_reason": "The answer accurately reflects the information in all three cited passages regarding BDNF increases after intense aerobic exercise in Parkinson's disease patients."
+    }
+  ],
+  "unanswerable": [
+    {
+      "id": "u01",
+      "question": "What is the recommended daily amount of aerobic exercise for maintaining brain health?",
+      "answer": "I don't have enough information in the provided documents.",
+      "refused": true
+    },
+    {
+      "id": "u02",
+      "question": "Which FDA-approved drug is currently considered the most effective treatment for enhancing neuroplasticity?",
+      "answer": "I don't have enough information in the provided documents.",
+      "refused": true
+    },
+    {
+      "id": "u03",
+      "question": "What is the average cost of a clinical neurorehabilitation program for stroke patients in the United States?",
+      "answer": "I don't have enough information in the provided documents.",
+      "refused": true
+    },
+    {
+      "id": "u04",
+      "question": "What is the minimum number of hours of sleep required to maximize neuroplasticity in healthy adults?",
+      "answer": "I don't have enough information in the provided documents.",
+      "refused": true
+    },
+    {
+      "id": "u05",
+      "question": "Which commercial brain-training application has the strongest clinical evidence for increasing neuroplasticity?",
+      "answer": "I don't have enough information in the provided documents.",
+      "refused": true
+    },
+    {
+      "id": "u06",
+      "question": "What percentage of stroke patients achieve complete motor recovery within one year?",
+      "answer": "I don't have enough information in the provided documents.",
+      "refused": true
+    }
+  ]
+}

@@ -25,6 +25,17 @@ def _get_client() -> OpenAI:
     )
 
 
+@lru_cache(maxsize=1)
+def _get_judge_client() -> OpenAI:
+    """Separate client for grading answers (Version 6), pointed at Ollama by default so
+    grading doesn't spend Gemini's daily quota. See JUDGE_* in app/config.py."""
+    return OpenAI(
+        base_url=config.JUDGE_BASE_URL,
+        api_key=config.JUDGE_API_KEY,
+        max_retries=0,
+        timeout=config.JUDGE_TIMEOUT,
+    )
+
 def is_daily_quota_error(exc: Exception) -> bool:
     """True if the provider says the DAILY quota is used up (waiting a few seconds won't help)."""
     return "PerDay" in str(exc)
@@ -50,3 +61,16 @@ def generate(messages: list[dict], temperature: float = 0.0) -> str:
             wait_seconds = 2 ** attempt   # waits 2, 4, 8, then 16 seconds
             print(f"[LLM] {type(exc).__name__}, retrying in {wait_seconds}s (attempt {attempt}/{MAX_ATTEMPTS})")
             time.sleep(wait_seconds)
+
+
+
+def judge(messages: list[dict], temperature: float = 0.0) -> str:
+    """Like generate(), but calls the judge model (JUDGE_* settings) and does not retry:
+    grading runs are offline, so a stuck local model should fail fast, not hang for minutes."""
+    client = _get_judge_client()
+    response = client.chat.completions.create(
+        model=config.JUDGE_MODEL,
+        messages=messages,
+        temperature=temperature,
+    )
+    return (response.choices[0].message.content or "").strip()

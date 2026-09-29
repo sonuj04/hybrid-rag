@@ -32,4 +32,11 @@ DEFAULT_MODE = os.getenv("DEFAULT_MODE", "rerank")
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
 LLM_MODEL = os.getenv("LLM_MODEL", "")
-LLM_TIMEOUT = float(os.getenv("LLM_TIMEOUT", "60"))  
+LLM_TIMEOUT = float(os.getenv("LLM_TIMEOUT", "60"))  # seconds to wait for one LLM reply
+
+# Judge model for answer evaluation (Version 6): defaults to local Ollama so grading
+# doesn't spend Gemini's daily quota. Change to point the judge at Gemini instead if you want.
+JUDGE_BASE_URL = os.getenv("JUDGE_BASE_URL", "http://localhost:11434/v1")
+JUDGE_API_KEY = os.getenv("JUDGE_API_KEY", "ollama")
+JUDGE_MODEL = os.getenv("JUDGE_MODEL", "gemma3:latest")
+JUDGE_TIMEOUT = float(os.getenv("JUDGE_TIMEOUT", "120"))  # local CPU inference is slower than Gemini

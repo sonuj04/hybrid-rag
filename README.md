@@ -181,3 +181,38 @@ Notes:
 | 502 | the LLM call failed |
 
 The suite has 29 tests. The API tests replace retrieval and the LLM with stubs, so they run without Elasticsearch or an API key.
+
+
+## Version 6: answer-quality evaluation
+
+Retrieval evaluation (Version 3) measures whether the right chunk was found. It says nothing about whether the LLM's *answer* stays faithful to that chunk. Version 6 checks three things about each answer, using `rerank` retrieval (k=5):
+
+1. **Citation validity** — every `[n]` in the answer must point at a chunk that was actually retrieved (1 to k). Checked with a regex, no LLM call.
+2. **Groundedness** — for questions the corpus can answer, a judge model checks whether each cited claim is actually supported by the passage it cites, or whether the answer adds something the passage doesn't say. The judge runs locally (Ollama, `gemma3:latest`), so grading doesn't touch Gemini's quota.
+3. **Refusal correctness** — for questions the corpus *cannot* answer, the model must reply with the exact sentence: *"I don't have enough information in the provided documents."* Checked with an exact string match.
+
+Run it:
+
+```bash
+python -m scripts.evaluate_answers
+```
+
+### Results: 8 hand-written answerable questions, 6 deliberately unanswerable questions
+
+| check | rate |
+|---|---|
+| citation validity | 1.00 (8/8) |
+| groundedness | 1.00 (8/8) |
+| refusal correctness | 1.00 (6/6) |
+
+Every answer cited only chunks it was actually given, every cited claim held up under the judge's check, and every unanswerable question got the exact refusal sentence instead of a guess.
+
+### Limitations
+
+- 14 questions is a small sample; a perfect score here is encouraging, not proof the model never hallucinates. The retrieval evaluation (Version 3, 52 questions) is the more statistically meaningful one.
+- The judge model (local `gemma3:latest`) is weaker than the model being judged (`gemini-3.1-flash-lite`). A stronger judge might be more critical.
+- The 6 unanswerable questions were hand-written to be clearly outside the corpus (drug names, costs, statistics not covered by these papers); real user queries near the edge of the corpus's coverage would be a harder test.
+
+### A note on the model
+
+Generation originally used `gemini-3.8-flash`. During this evaluation it repeatedly failed — a very low free-tier daily quota (20 requests/day) one day, then a "high demand" 503 upstream outage the next — both specific to that model, which was only 3 weeks old at the time. Generation now uses `gemini-3.1-flash-lite`, an established model with a larger free-tier quota, chosen over the also-available `gemini-flash-lite-latest` because it's a pinned version rather than an alias that could silently change underneath the evaluation later.

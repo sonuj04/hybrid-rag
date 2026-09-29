@@ -1,0 +1,13 @@
+{
+  "timestamp": "20260929_150700",
+  "mode": "rerank",
+  "k": 5,
+  "stop_reason": "api_error",
+  "summary": {
+    "citation_validity_rate": null,
+    "groundedness_rate": null,
+    "refusal_rate": null
+  },
+  "answerable": [],
+  "unanswerable": []
+}
