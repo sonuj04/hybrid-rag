@@ -13,18 +13,16 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
-    # No ports: mapped on purpose — only the api service talks to this,
-    # over the compose network, so it can't collide with your other
-    # Elasticsearch container already using host port 9200.
+    # No ports mapped on purpose: only the api service talks to this, over the compose
+    # network, so it can't collide with your other Elasticsearch container on host port 9200.
 
   api:
     build: .
     container_name: hybrid-rag-api
     env_file: .env
     environment:
-      # These override .env so the container always talks to the
-      # compose Elasticsearch, with no auth and no cert, regardless
-      # of what your host .env has for local (non-Docker) runs.
+      # These override .env so the container always talks to the compose Elasticsearch,
+      # with no auth and no cert, regardless of what your host .env has for local runs.
       - ES_URL=http://es:9200
       - ES_PASSWORD=
       - ES_CA_CERT=
@@ -36,6 +34,14 @@ services:
     volumes:
       - ./data/raw:/app/data/raw:ro
       - hf-cache:/root/.cache/huggingface
+    healthcheck:
+      # python, not curl: curl isn't installed in the python:3.12-slim base image
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
 
 volumes:
   es-data:

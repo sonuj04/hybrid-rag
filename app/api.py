@@ -8,6 +8,7 @@ import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from app import config
@@ -115,3 +116,9 @@ def ask(request: QueryRequest) -> dict:
         for number, chunk in enumerate(chunks, start=1)
     ]
     return {"answer": answer, "mode": request.mode, "citations": citations}
+
+
+
+# Mounted last, so it never shadows /health, /search or /ask above; html=True serves
+# index.html for "/" automatically.
+app.mount("/", StaticFiles(directory=config.PROJECT_ROOT / "app" / "static", html=True), name="frontend")

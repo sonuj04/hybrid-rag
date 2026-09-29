@@ -82,3 +82,10 @@ def test_ask_reports_an_llm_failure_as_502(monkeypatch):
     monkeypatch.setattr(api, "generate", broken)
     response = client.post("/ask", json={"query": "x"})
     assert response.status_code == 502
+
+
+
+def test_frontend_is_served_at_root():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert "Hybrid RAG" in response.text    
